@@ -16,8 +16,8 @@ class _WeatherNavigationState extends State<WeatherNavigation> {
 
   static const List<Widget> _widgetOptions = <Widget>[
     WeatherHome(),
-    WeatherSearch(),
     WeatherRadar(),
+    WeatherSearch(),
     WeatherSettings(),
   ];
 
@@ -31,32 +31,36 @@ class _WeatherNavigationState extends State<WeatherNavigation> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex), 
+        child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: SizedBox(
         height: 60,
         child: BottomNavigationBar(
-          items: const <BottomNavigationBarItem> [
+          items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
+              backgroundColor: Color.fromRGBO(30, 30, 30, 30),
               icon: Icon(Icons.home),
               label: 'Home',
             ),
             BottomNavigationBarItem(
+              backgroundColor: Color.fromRGBO(30, 30, 30, 30),
               icon: Icon(Icons.map),
               label: 'Radar',
             ),
             BottomNavigationBarItem(
+              backgroundColor: Color.fromRGBO(30, 30, 30, 30),
               icon: Icon(Icons.search),
               label: 'Search',
             ),
             BottomNavigationBarItem(
+              backgroundColor: Color.fromRGBO(30, 30, 30, 30),
               icon: Icon(Icons.settings),
               label: 'Settings',
             ),
           ],
           currentIndex: _selectedIndex,
-          selectedItemColor: Colors.blue[800]!,
-          unselectedItemColor: Colors.black,
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.white,
           onTap: _onItemTapped,
         ),
       ),
